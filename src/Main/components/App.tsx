@@ -20,7 +20,7 @@ export class App extends React.Component<AppProps> {
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
         </p>
-          <p>Here is our prop: "{this.props.mainState.porp}"</p>
+          <p>We only have one prop: "{this.props.mainState.porp}"</p>
           <a
             className="App-link"
             href="https://reactjs.org"

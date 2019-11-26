@@ -1,8 +1,15 @@
 import { MainAction, REFRESH } from "./actions";
 import { MainState } from "../MainState";
-import { Reducer } from "redux";
 
-export const mainReducer: Reducer<MainState | undefined> = (state: MainState | undefined, action: MainAction | any) => {
+const defaultState: MainState = {
+    porp: "..."
+}
+
+export function mainReducer(
+    state = defaultState, 
+    action: MainAction | any
+): MainState 
+{
     switch (action.type) {
         case REFRESH:
             return state;

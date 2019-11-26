@@ -5,13 +5,18 @@ import { App } from './Main/components/App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
-import { store } from './Main/store';
+import store from './Main/store';
+import { MainState } from './Main/MainState';
+
+const mainState: MainState = {
+    porp: "Hello from Main/index.tsx"
+}
 
 // everything inside App component can access anything in Provider component
 ReactDOM.render(
     <AppContainer>
         <Provider store={store}>
-            <App  />
+            <App mainState={mainState}/>
         </Provider>
     </AppContainer>,
     document.getElementById('root')
