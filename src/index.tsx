@@ -1,22 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import { App } from './Main/components/App';
+import './Shared/Styles/index.css';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
 import store from './Main/store';
-import { MainState } from './Main/MainState';
+import { Root } from './Root';
+import { RootProps } from './Shared/AppState';
 
-const mainState: MainState = {
-    porp: "Hello from Main/index.tsx"
+const defaultProps: RootProps = {
+    friendState: { friends: [] },
+    loginState: { loggedIn: false },
+    mainState: { porp: "a porp" }
 }
 
 // everything inside App component can access anything in Provider component
 ReactDOM.render(
     <AppContainer>
         <Provider store={store}>
-            <App mainState={mainState}/>
+            <Root {...defaultProps} />
         </Provider>
     </AppContainer>,
     document.getElementById('root')

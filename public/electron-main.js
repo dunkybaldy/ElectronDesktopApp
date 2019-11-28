@@ -1,16 +1,17 @@
-const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow, Menu } = require("electron");
 const path = require("path");
 const isDev = require("electron-is-dev");
 
 let mainWindow;
+Menu.setApplicationMenu(null);
 
 const createWindow = () => {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600
     });
+
+    // mainWindow.autoHideMenuBar = true;
 
     mainWindow.loadURL(isDev ? "http://localhost:3000" : `file://${path.join(__dirname, "../build/index.html")}`);
     mainWindow.on("closed", () => (mainWindow = null));
