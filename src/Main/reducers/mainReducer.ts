@@ -2,7 +2,8 @@ import { MainAction, REFRESH } from "./actions";
 import { MainState } from "../MainState";
 
 const defaultState: MainState = {
-    porp: "..."
+    porp: "...",
+    logoutRequest: false
 }
 
 export function mainReducer(

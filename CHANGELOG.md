@@ -1,3 +1,6 @@
+### 14/12/2019 - dunkybaldy
+* Logout button on main.tsx
+
 ### 28/11/2019 - dunkybaldy
 * Props are immutable
 * State is mutable

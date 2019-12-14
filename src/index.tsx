@@ -11,7 +11,7 @@ import { RootProps } from './Shared/AppState';
 const defaultProps: RootProps = {
     friendState: { friends: [] },
     loginState: { loggedIn: false },
-    mainState: { porp: "a porp" }
+    mainState: { porp: "a porp", logoutRequest: false }
 }
 
 // everything inside App component can access anything in Provider component

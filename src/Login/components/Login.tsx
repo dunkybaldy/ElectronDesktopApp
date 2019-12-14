@@ -21,7 +21,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
                 this.state.loggedIn ? <Redirect to="/Main" /> : false
             }
             <div>
-                <button type="submit" onClick={this.onClick}>A Butt</button>
+                <button type="submit" onClick={this.onClick}>Login</button>
             </div>
         </>
     };
