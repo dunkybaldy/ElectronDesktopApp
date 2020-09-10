@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import '../../Shared/Styles/App.css';
+import '../../Shared/Styles/App.scss';
 import { Redirect } from 'react-router';
 import { MainState } from '../MainState';
 
@@ -25,9 +25,6 @@ export class Main extends React.Component<MainProps, MainState> {
         {
           this.state.logoutRequest ? <Redirect to="/" /> : false
         }
-        <div>
-          <button type="submit" onClick={this.onClick}>Logout</button>
-        </div>
         <div>
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />

@@ -5,9 +5,18 @@
   "description": "game-client",
   "author": "dunkybaldy",
   "build": {
-    "appId": "com.game-client"
+    "appId": "com.game-client",
+    "extends": null,
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json"      
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
   },
-  "main": "public/electron-main.js",
+  "main": "public/electron.js",
   "homepage": "./",
   "scripts": {
     "react-start": "react-scripts start",
@@ -15,6 +24,9 @@
     "react-test": "react-scripts test --env=jsdom",
     "react-eject": "react-scripts eject",
     "electron-build": "electron-builder",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "build --em.main=build/electron.js",
     "release": "yarn react-build && electron-builder --publish=always",
     "build": "yarn react-build && yarn electron-build",
     "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
@@ -35,7 +47,7 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^24.0.22",
+    "@types/jest": "^24.9.0",
     "@types/node": "12.12.7",
     "@types/react": "16.9.11",
     "@types/react-dom": "16.9.4",
@@ -68,7 +80,7 @@
     "@testing-library/jest-dom": "^5.0.2",
     "@testing-library/react": "^9.4.0",
     "dotenv": "^8.2.0",
-    "jest": "^25.1.0",
+    "node-sass": "^4.14.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.3",

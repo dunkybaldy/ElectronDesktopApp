@@ -20,3 +20,11 @@
 .App-link {
   color: #37ee7d;
 }
+
+.banner {
+  background-color: red;
+  min-height: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Shared/Styles/index.css';
+import './Shared/Styles/index.scss';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import { AppContainer } from 'react-hot-loader';
@@ -11,7 +11,8 @@ import { RootProps } from './Shared/AppState';
 const defaultProps: RootProps = {
     friendState: { friends: [] },
     loginState: { loggedIn: false },
-    mainState: { porp: "a porp", logoutRequest: false }
+    mainState: { porp: "a porp", logoutRequest: false },
+    riotAppState: { userId: "" }
 }
 
 // everything inside App component can access anything in Provider component

@@ -27,7 +27,7 @@ export class Login extends React.Component<LoginProps, LoginState> {
     };
 
     onClick = () => {
-        alert("Click on da butt");
+        alert("There should be some authentication stuff here");
         this.setState({ loggedIn: true })
     }
 }
