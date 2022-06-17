@@ -44,7 +44,7 @@
     "@types/redux-devtools-extension": "^2.13.2",
     "@types/redux-thunk": "^2.1.0",
     "concurrently": "^5.0.0",
-    "electron": "^7.1.1",
+    "electron": "^15.5.5",
     "electron-builder": "^22.1.0",
     "wait-on": "^3.3.0",
     "cross-env": "^6.0.3",
